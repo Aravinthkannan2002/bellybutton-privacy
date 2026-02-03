@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Child Safety Standards for BellyButton">
+    <meta name="theme-color" content="#004C99">
+    <title>Child Safety Standards - BellyButton</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #004C99;
+            --primary-dark: #003d7a;
+            --text-primary: #272425;
+            --text-secondary: #6F6F6F;
+            --text-muted: #9E9E9E;
+            --bg-primary: #ffffff;
+            --bg-secondary: #FAFAFA;
+            --border-color: #E0E0E0;
+            --radius-lg: 12px;
+            --radius-xl: 16px;
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, #004C99 0%, #212B4F 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .wrapper { max-width: 900px; margin: 0 auto; }
+
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: clamp(1.75rem, 5vw, 2.5rem);
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .header .subtitle { font-size: 1rem; opacity: 0.9; }
+
+        .container {
+            background: var(--bg-primary);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+        }
+
+        .last-updated {
+            background: var(--bg-secondary);
+            padding: 16px 32px;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .last-updated::before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            background: #43A047;
+            border-radius: 50%;
+        }
+
+        .content { padding: 32px; }
+
+        .intro {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 32px;
+        }
+
+        .section { margin-bottom: 40px; }
+        .section:last-child { margin-bottom: 0; }
+
+        h2 {
+            font-size: 1.375rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        h2 .number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #004C99 0%, #212B4F 100%);
+            color: white;
+            border-radius: 8px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        p {
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        ul {
+            list-style: none;
+            margin: 16px 0;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 10px;
+            color: var(--text-secondary);
+        }
+
+        ul li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 6px;
+            height: 6px;
+            background: var(--primary-color);
+            border-radius: 50%;
+        }
+
+        ul li strong {
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-section {
+            background: linear-gradient(135deg, rgba(0, 76, 153, 0.08) 0%, rgba(33, 43, 79, 0.08) 100%);
+            border-radius: var(--radius-lg);
+            padding: 28px;
+            margin-top: 24px;
+            border: 1px solid rgba(0, 76, 153, 0.2);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 12px 0;
+        }
+
+        .contact-item .label {
+            font-weight: 600;
+            color: var(--text-primary);
+            min-width: 70px;
+        }
+
+        .footer {
+            background: var(--bg-secondary);
+            padding: 24px 32px;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer p {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            margin-bottom: 8px;
+        }
+
+        .footer p:last-child { margin-bottom: 0; }
+        .footer .copyright { font-weight: 500; }
+
+        @media (max-width: 768px) {
+            body { padding: 12px; }
+            .content { padding: 24px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <h1>Child Safety Standards</h1>
+            <p class="subtitle">BellyButton</p>
+        </header>
+
+        <main class="container">
+            <div class="last-updated">
+                Last Updated: February 3, 2026
+            </div>
+
+            <div class="content">
+                <p class="intro">
+                    BellyButton has zero tolerance for child sexual abuse material (CSAM) or child sexual abuse and exploitation (CSAE).
+                    We are committed to protecting children and maintaining a safe environment for all users.
+                </p>
+
+                <section class="section">
+                    <h2><span class="number">1</span> Our Commitment</h2>
+                    <ul>
+                        <li>We prohibit any content that sexualizes, exploits, or endangers minors</li>
+                        <li>We do not permit users to create, upload, or distribute CSAM through our platform</li>
+                        <li>We actively work to detect and remove any content that violates these standards</li>
+                        <li>We prohibit any behavior that grooms, solicits, or exploits minors</li>
+                    </ul>
+                </section>
+
+                <section class="section">
+                    <h2><span class="number">2</span> Prohibited Content and Behavior</h2>
+                    <p>The following is strictly prohibited on BellyButton:</p>
+                    <ul>
+                        <li>Any sexual content involving minors</li>
+                        <li>Content that sexualizes or objectifies children</li>
+                        <li>Grooming behavior or inappropriate contact with minors</li>
+                        <li>Solicitation of minors for sexual purposes</li>
+                        <li>Sharing or requesting CSAM</li>
+                        <li>Any content that endangers or exploits children</li>
+                    </ul>
+                </section>
+
+                <section class="section">
+                    <h2><span class="number">3</span> Reporting Violations</h2>
+                    <p>If you encounter any content or behavior that exploits or endangers children, please report it immediately:</p>
+                    <ul>
+                        <li><strong>In-App:</strong> Use the report feature available on any content or user profile</li>
+                        <li><strong>Email:</strong> <a href="mailto:safety@bellybutton.global">safety@bellybutton.global</a></li>
+                    </ul>
+                    <p>All reports are treated with urgency and confidentiality.</p>
+                </section>
+
+                <section class="section">
+                    <h2><span class="number">4</span> Our Response</h2>
+                    <p>When we receive a report or detect a violation, we take immediate action:</p>
+                    <ul>
+                        <li>Reported content is reviewed and removed promptly</li>
+                        <li>Violating accounts are immediately suspended and permanently banned</li>
+                        <li>We preserve evidence for law enforcement purposes</li>
+                        <li>We report confirmed CSAM to the National Center for Missing & Exploited Children (NCMEC)</li>
+                        <li>We cooperate fully with law enforcement investigations</li>
+                    </ul>
+                </section>
+
+                <section class="section">
+                    <h2><span class="number">5</span> Contact Us</h2>
+                    <p>For child safety concerns or to report violations:</p>
+
+                    <div class="contact-section">
+                        <div class="contact-item">
+                            <span class="label">Email:</span>
+                            <a href="mailto:safety@bellybutton.global">safety@bellybutton.global</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="label">Website:</span>
+                            <a href="https://bellybutton.global" target="_blank" rel="noopener noreferrer">https://bellybutton.global</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <footer class="footer">
+                <p>BellyButton is committed to the safety and protection of all children.</p>
+                <p class="copyright">&copy; 2026 BellyButton. All rights reserved.</p>
+            </footer>
+        </main>
+    </div>
+</body>
+</html>
